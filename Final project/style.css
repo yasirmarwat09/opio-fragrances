@@ -1,0 +1,542 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navigation styles */
+.nav-container {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #fff;
+  color: #000;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  margin: 10px 0;
+}
+
+.search-bar input {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: #000;
+}
+
+.cart-icon {
+  font-size: 25px;
+  color: #000;
+  position: relative;
+}
+
+.cart-counter {
+  position: absolute;
+  top: -14px;
+  right: -10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+}
+
+.logo-buttons {
+  display: flex;
+  gap: 10px;
+  display: none; 
+}
+
+.right-side-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn i {
+  font-size: 25px;
+  color: #000;
+}
+
+/* Second navbar (links) */
+.nav-pages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+  background-color: #070707;
+  padding: 0 70px;
+}
+
+.nav-pages a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-pages a {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-pages a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1),
+              0 0 30px rgba(255, 255, 255, 0.8),
+              0 0 45px rgba(255, 255, 255, 0.6),
+              0 0 60px rgba(255, 255, 255, 0.4);
+}
+
+.nav-pages a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1),
+               0 0 16px rgba(255, 255, 255, 0.8),
+               0 0 24px rgba(255, 255, 255, 0.6),
+               0 0 32px rgba(255, 255, 255, 0.4);
+}
+
+.nav-pages a:hover::after {
+  width: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1),
+              0 0 30px rgba(255, 255, 255, 0.8),
+              0 0 45px rgba(255, 255, 255, 0.6),
+              0 0 60px rgba(255, 255, 255, 0.4);
+}
+
+
+/* Search button */
+.search-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button i {
+  font-size: 25px;
+  color: #000;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-button {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  min-height: 400px; 
+  overflow: hidden;
+  position: relative;
+  background-color: #f4f4f4;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Buttons */
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.nav-btn {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #c2baba;
+  border: none;
+}
+
+.nav-btn:hover {
+  background-color: rgb(203, 104, 124);
+}
+
+.nav-btn.active {
+  background-color: rgb(203, 104, 124);
+}
+
+/* Shop Now Section Heading Styles */
+.shop-now-heading {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 36px;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+
+.shop-now-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; 
+  left: 50%;
+  width: 15%;
+  height: 2px;
+  background-color: #f27083;
+  transform: translateX(-50%);
+}
+
+/* Shop Now Section Styles */
+.shop-now-container-wrapper{
+  overflow-x: hidden;
+  width: 100%;
+}
+.shop-now-wrapper {
+  display: flex;
+  justify-content: space-between; /* This aligns the chevron buttons and items */
+  align-items: center; /* Vertically centers items */
+  position: relative;
+
+}
+
+.shop-now-section {
+  display: flex;
+  gap: 100px;
+  margin: 20px 90px;
+  flex-wrap: nowrap;
+  justify-content: space-evenly ;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+}
+
+.shop-now-section a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.shop-now-section img {
+  width: 170px;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  object-fit: cover;
+  height: 170px;
+}
+
+.shop-now-section p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.shop-now-section p::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #f1a7b2;
+  transform: translateX(-50%);
+}
+
+.shop-now-section a:hover {
+  transform: scale(1.05);
+}
+
+.shop-now-section a:hover p {
+  color: #c23e44;
+}
+
+.shop-now-section a:hover {
+  transform: scale(1.1);
+}
+
+/* Chevron Button Styles */
+.left-btn,
+.right-btn {
+  position: absolute;
+  top: 50%; /* Center relative to the Shop Now section */
+  transform: translateY(-50%); /* Center buttons vertically */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  display: none; /* Hidden by default */
+}
+
+.left-btn {
+  left: -20px; /* Position the left button on the left side */
+}
+
+.right-btn {
+  right: -20px; /* Position the right button on the right side */
+}
+
+.left-btn:hover,
+.right-btn:hover {
+  background-color: #f1a7b2;
+  color: white;
+}
+
+
+
+/* Perfume Grid Styling */
+.perfume-section {
+  width: 100%;
+  padding: 20px;
+}
+
+.perfume-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 perfumes per row on large screens */
+  gap: 20px;
+  position: relative;
+  top: 20px;
+}
+
+/* Individual perfume item */
+.perfume-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease; /* Hover effect */
+  text-decoration: none;
+}
+
+.perfume-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.perfume-name {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease; /* Hover effect */
+}
+
+.perfume-name:hover {
+  color: #f27083; /* Color change on hover */
+}
+
+.perfume-price {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #bbae1b;
+}
+
+/* bottom hero img */
+.bottom-hero-img {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  top: 30px;
+}
+
+.bottom-hero-img img {
+  width: 100%; 
+  height: 500px; 
+  object-fit: cover; 
+  display: block; 
+}
+/* Responsive Styles */
+@media (max-width: 1050px) {
+  
+  .search-bar {
+    display: none;
+  }
+
+  .search-button {
+    display: block;
+  }
+
+  .logo-buttons {
+    display: flex;
+  }
+
+  .nav-pages {
+    display: none;
+  }
+
+  /* hero section */
+  .hero {
+    min-height: 300px;
+  }
+
+  .hero-img {
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .navigation {
+    bottom: 10px;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    width: 10px;
+    height: 10px;
+  }
+
+  .shop-now-heading::after {
+    width: 30%; /* Wider underline for smaller screens */
+  }
+
+  .left-btn,
+  .right-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5; /* Ensure buttons are above the images */
+  }
+
+  .left-btn {
+    left: 10px; /* Place buttons within the section */
+  }
+
+  .right-btn {
+    right: 10px; /* Place buttons within the section */
+  }
+
+  .shop-now-section img {
+    width: 190px;
+    height: 190px;
+  }
+
+  /* Show only two items at a time on smaller screens */
+  .shop-now-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-left: 10px; /* Space on the left side */
+    padding-right: 10px; /* Space on the right side */
+  }
+
+  .shop-now-section a {
+    width: calc(50% - 10px); /* Adjust the width of each item */
+  }
+
+  /* Optional: Adjust last item margin if needed */
+  .shop-now-section a:last-child {
+    margin-right: 0;
+  }
+
+  .perfume-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 5px;
+    padding: 0 5px;
+
+}
+.perfume-item img {
+  width: 220px;
+  height: 220px;
+}
+}

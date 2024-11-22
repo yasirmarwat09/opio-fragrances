@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fragrances</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="logo-buttons">
+            <button class="toggle-menu-btn search-button">
+              <i class="fa fa-bars"></i>
+            </button>
+            <button class="toggle-btn search-button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <div class="logo">
+            <img src="../Assets/logo-img.png" alt="logo image" />
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search skincare products" />
+          </div>
+          <div class="right-side-buttons">
+            <button class="login-btn">
+              <i class="fa-regular fa-user"></i>
+            </button>
+            <div class="cart-container">
+              <div class="cart-counter">0</div>
+              <a href="#" class="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-pages">
+          <a href="#">New Arrivals</a>
+          <a href="#">Most Popular</a>
+          <a href="#">Perfumes</a>
+          <a href="#">Deodorants</a>
+          <a href="#">Body Mist</a>
+          <a href="#">About us</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="slider">
+          <div class="slides">
+            <div class="slide">
+              <img
+                class="hero-img"
+                src="../Assets/1-hero-img.jpg"
+                alt="perfume image"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="hero-img"
+                src="../Assets/2-hero-img.jpg"
+                alt="perfume image"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="hero-img"
+                src="../Assets/3-hero-img.jpg"
+                alt="perfume image"
+              />
+            </div>
+          </div>
+          <div class="navigation">
+            <button class="nav-btn" data-index="0"></button>
+            <button class="nav-btn" data-index="1"></button>
+            <button class="nav-btn" data-index="2"></button>
+          </div>
+        </div>
+      </section>
+      <section class="shop-now-container">
+        <h2 class="shop-now-heading">Shop Now</h2>
+        <div class="shop-now-container-wrapper">
+          <div class="shop-now-wrapper">
+            <div class="shop-now-section">
+              <a href="#">
+                <img
+                  src="../Assets/for-men-shopnow.jpg"
+                  alt="Men perfume section"
+                />
+                <p>For Men</p>
+              </a>
+              <a href="#">
+                <img
+                  src="../Assets/for-women-shopnow.jpg"
+                  alt="Women perfume section"
+                />
+                <p>For Women</p>
+              </a>
+              <a href="#">
+                <img
+                  src="../Assets/bodymist-shopnow.jpg"
+                  alt="Body mist section"
+                />
+                <p>Body Mist</p>
+              </a>
+              <a href="#">
+                <img src="../Assets/deo-shopnow.jpg" alt="Deo section" />
+                <p>Deo</p>
+              </a>
+              <a href="#">
+                <img
+                  src="../Assets/most-popular-shopnow.jpg"
+                  alt="Most popular section"
+                />
+                <p>Most Popular</p>
+              </a>
+            </div>
+            <!-- Chevron buttons should be inside this wrapper to avoid positioning issues -->
+            <button class="left-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="right-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="best-seller">
+        <div class="perfume-section">
+          <h2 class="shop-now-heading">Best Seller</h2>
+
+          <div class="perfume-grid">
+            <a href="#" class="perfume-item">
+              <img
+                src="../Assets/best-seller/Creative-PLush.jpg"
+                alt="plush perfume"
+              />
+              <p class="perfume-name">Plush for women</p>
+              <p class="perfume-price">Rs.3,499.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img src="../Assets/best-seller/divine.jpg" alt="perfume 2" />
+              <p class="perfume-name">divine for women</p>
+              <p class="perfume-price">Rs.3,499.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img
+                src="../Assets/best-seller/PinkGorgeous.jpg"
+                alt="perfume 3"
+              />
+              <p class="perfume-name">gorgeous for women</p>
+              <p class="perfume-price">Rs.3,250.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img src="../Assets/best-seller/Emotion.jpg" alt="perfume 4" />
+              <p class="perfume-name">emotion for women</p>
+              <p class="perfume-price">Rs.3,250.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img src="../Assets/best-seller/orlene.jpg" alt="perfume 5" />
+              <p class="perfume-name">orlene for women</p>
+              <p class="perfume-price">Rs.3,499.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img
+                src="../Assets/best-seller/silversmoke1.jpg"
+                alt="perfume 6"
+              />
+              <p class="perfume-name">silver smoke for men</p>
+              <p class="perfume-price">Rs.3,399.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img src="../Assets/best-seller/revive1.jpg" alt="perfume 7" />
+              <p class="perfume-name">revive for men</p>
+              <p class="perfume-price">Rs.3,499.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img src="../Assets/best-seller/momentum.jpg" alt="perfume 8" />
+              <p class="perfume-name">momentum for men</p>
+              <p class="perfume-price">Rs.3,499.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img
+                src="../Assets/best-seller/victorious1.jpg"
+                alt="perfume 9"
+              />
+              <p class="perfume-name">victorious for men</p>
+              <p class="perfume-price">Rs.4,499.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img src="../Assets/best-seller/vibrant.jpg" alt="perfume 10" />
+              <p class="perfume-name">vibrant for men</p>
+              <p class="perfume-price">Rs.3,599.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img src="../Assets/best-seller/velvet.jpg" alt="perfume 11" />
+              <p class="perfume-name">velvet for men</p>
+              <p class="perfume-price">Rs.3,999.00</p>
+            </a>
+            <a href="#" class="perfume-item">
+              <img src="../Assets/best-seller/sparkle.jpg" alt="perfume 12" />
+              <p class="perfume-name">sparkle for men</p>
+              <p class="perfume-price">Rs.3,899.00</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="bottom-hero-img">
+        <img src="../Assets/bottom-hero-img.jpg" alt="button hero img" />
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
